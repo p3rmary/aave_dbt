@@ -1,0 +1,31 @@
+name: "aave_dbt"
+version: "1.0.0"
+config-version: 2
+
+profile: "uniswap_profile"
+
+# Define paths
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  aave_dbt:
+    +materialized: view
+    staging:
+      +materialized: table
+      +schema: staging
+      +enabled: true
+
+seeds:
+  aave_dbt:
+    +schema: raw
+    aave_logs28:
+      +column_types:
+        block_number: numeric
+        log_index: numeric
+    timestamp:
+      +column_types: 
+        block_number: numeric
+        block_timestamp: numeric
