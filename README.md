@@ -125,6 +125,7 @@ Sample Dashboard
 I've created a sample dashboard to visualize and test the transformed data:
 
 [Aave Dashboard](https://dune.com/permary/aave-test)
+
 The dashboard includes:
 
 - Total supply by token
