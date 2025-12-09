@@ -112,4 +112,23 @@ This project expects raw Ethereum event logs to be available in your PostgreSQL 
 - Log index
 - Event topics
 - Event data (hex encoded)
-- Contract address
+
+ ## Tools Used
+
+- dbt (Data Build Tool) - Data transformation framework
+- PostgreSQL - Data warehouse
+- Allnodes RPC - Blockchain data source
+
+
+Sample Dashboard
+ View the dashboard on Dune Analytics
+I've created a sample dashboard to visualize and test the transformed data:
+
+[Aave Dashboard](https://dune.com/permary/aave-test)
+The dashboard includes:
+
+- Total supply by token
+- Total borrowed by token
+- Total withdrawn by token
+- Total repaid by token
+- Total Liquidated collateral and Debt amount by asset
